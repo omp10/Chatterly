@@ -3,7 +3,6 @@ import { getRandomEmoji } from "../utils/emojis";
 import { Conversation } from "./conversation"
 export const Conversations = () => {
   const {loading,conversations}=useGetConversation();
-  console.log(conversations);
   
   return (
     <div className="py-2 flex flex-col overflow-auto">
