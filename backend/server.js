@@ -29,12 +29,7 @@ app.get("*",(req,res)=>{
   res.sendFile(path.join(__dirname,"frontend","dist","index.html"));
 })
 
-// Root route
-// app.get("/", (req, res) => {
-//   res.send("Hello World");
-// });
 
-// Start server
 server.listen(PORT, () => {
   connectToMongo();
   console.log(`Server started at: http://localhost:${PORT}/`);
