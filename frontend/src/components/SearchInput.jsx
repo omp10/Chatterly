@@ -13,8 +13,8 @@ const SearchInput = () => {
     e.preventDefault();
     if (!search) return;
     
-    if (search.length < 3) {
-      toast.error('Search must be at least 3 characters long');
+    if (search.length < 2) {
+      toast.error('Search must be at least 2 characters long');
       return;
     }
 
