@@ -1,7 +1,7 @@
 import { useSocketContext } from "../../context/SocketContext";
 import useConversation from "../zustand/UseConversation";
 
-export const Conversation = ({ conversation, lastIdx, emoji }) => {
+ const  Conversation = ({ conversation, lastIdx, emoji }) => {
   const { selectedConversation, setSelectedConversation } = useConversation();
   const { onlineUsers } = useSocketContext();
   
@@ -32,3 +32,4 @@ export const Conversation = ({ conversation, lastIdx, emoji }) => {
     </>
   );
 };
+export default Conversation;
