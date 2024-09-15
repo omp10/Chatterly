@@ -14,6 +14,7 @@ const Conversations = () => {
           />
 
         ))}
+        {loading ? <span className='loading loading-spinner mx-auto'></span> : null}
     </div>
 
   )
