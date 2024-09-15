@@ -9,7 +9,7 @@ const MessageContainer = () => {
 	const { selectedConversation, setSelectedConversation } = useConversation();
 
 	useEffect(() => {
-		// Cleanup function (unmounts)
+		// cleanup function (unmounts)
 		return () => setSelectedConversation(null);
 	}, [setSelectedConversation]);
 
