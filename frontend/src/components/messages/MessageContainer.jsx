@@ -7,40 +7,29 @@ import { useAuthContext } from "../../../context/AuthContext";
 
 const MessageContainer = () => {
     const { selectedConversation, setSelectedConversation } = useConversation();
-    const [hasConversation, setHasConversation] = useState(false);
 
-<<<<<<< HEAD
 	useEffect(() => {
 		// cleanup function (unmounts)
 		return () => setSelectedConversation(null);
 	}, [setSelectedConversation]);
-=======
-    useEffect(() => {
-        // Update the state when selectedConversation changes
-        setHasConversation(!!selectedConversation);
->>>>>>> 79ea40b99ff2700164f4e06117d99acfdcd077c3
 
-        // Cleanup function (unmounts)
-        return () => setSelectedConversation(null);
-    }, [selectedConversation, setSelectedConversation]);
-
-    return (
-        <div className='md:min-w-[450px] flex flex-col'>
-            {!hasConversation ? (
-                <NoConversationFound />
-            ) : (
-                <>
-                    {/* Header */}
-                    <div className='bg-slate-500 px-4 py-2 mb-2'>
-                        <span className='label-text'>To:</span>{" "}
-                        <span className='text-gray-900 font-bold'>{selectedConversation.fullName}</span>
-                    </div>
-                    <Messages />
-                    <MessageInput />
-                </>
-            )}
-        </div>
-    );
+	return (
+		<div className='md:min-w-[450px] flex flex-col'>
+			{!selectedConversation ? (
+				<NoConversationFound />
+			) : (
+				<>
+					{/* Header */}
+					<div className='bg-slate-500 px-4 py-2 mb-2'>
+						<span className='label-text'>To:</span>{" "}
+						<span className='text-gray-900 font-bold'>{selectedConversation.fullName}</span>
+					</div>
+					<Messages />
+					<MessageInput />
+				</>
+			)}
+		</div>
+	);
 };
 
 const NoConversationFound = () => {
